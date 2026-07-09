@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — RoadLine</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg rl-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Road<span class="brand-dot">Line</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item ms-lg-2"><a class="nav-link btn-register-nav" href="register.html">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== REGISTER ===================== -->
+<div class="auth-wrap">
+  <div class="container">
+    <div class="auth-card">
+      <div class="ticket-code">Boarding Pass · New Member</div>
+      <h2>Create your account.</h2>
+      <p class="subtitle">Join RoadLine and book your first trip in minutes.</p>
+
+      <div id="registerAlert" class="alert d-none" role="alert"></div>
+
+      <form id="registerForm" novalidate>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="registerName" placeholder="Full name" required minlength="2">
+          <label for="registerName">Full name</label>
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com" required>
+          <label for="registerEmail">Email address</label>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="registerPhone" placeholder="Phone" required pattern="[0-9]{10}">
+          <label for="registerPhone">Phone number</label>
+          <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+        </div>
+
+        <div class="form-floating mb-1 position-relative">
+          <input type="password" class="form-control" id="registerPassword" placeholder="Password" minlength="8" required>
+          <label for="registerPassword">Password</label>
+          <button type="button" id="toggleRegisterPw" class="btn btn-sm position-absolute" style="right:8px; top:8px; z-index:5; background:transparent;" aria-label="Show password">
+            <i class="bi bi-eye"></i>
+          </button>
+          <div class="invalid-feedback">Password must be at least 8 characters.</div>
+        </div>
+        <div class="pw-strength mb-3"><div class="bar"></div></div>
+
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="registerConfirm" placeholder="Confirm password" required>
+          <label for="registerConfirm">Confirm password</label>
+          <div class="invalid-feedback">Passwords do not match.</div>
+        </div>
+
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+          <label class="form-check-label text-secondary" for="agreeTerms" style="font-size:0.88rem;">
+            I agree to the <a href="#" style="color:var(--amber-dark); font-weight:600;">Terms</a> and <a href="#" style="color:var(--amber-dark); font-weight:600;">Privacy Policy</a>
+          </label>
+          <div class="invalid-feedback">You must agree before continuing.</div>
+        </div>
+
+        <button type="submit" class="btn btn-amber w-100 py-2">Create Account</button>
+      </form>
+
+      <div class="divider-or">or sign up with</div>
+      <div class="social-row">
+        <button class="btn"><i class="bi bi-google me-1"></i> Google</button>
+        <button class="btn"><i class="bi bi-facebook me-1"></i> Facebook</button>
+      </div>
+
+      <p class="text-center text-secondary mt-4 mb-0">
+        Already have an account? <a href="login.html" style="color:var(--amber-dark); font-weight:700;">Log in</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
